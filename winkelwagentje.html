@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -70,20 +72,20 @@
                 <tr>
                     <th scope="row"><img class="Winkelwagentje-img" src="img/smarties.jpg"></th>
                     <td><h3>Smarties</h3><br>Prijs per 100 gram: € 1,50</td>
-                    <td><input type="number"></td>
-                    <td>0</td>
+                    <td><input class="aantal" data-id="1" type="number" data-price="1.50" min="0" value="1"></td>
+                    <td><span id="sub-1" class="sub"></span></td>
                 </tr>
                 <tr>
                     <th scope="row"><img class="Winkelwagentje-img" src="img/candy6.jpg"></th>
                     <td><h3>Zure Slungels</h3><br>Prijs per 100 gram: € 1,55</td>
-                    <td><input type="number"></td>
-                    <td>0</td>
+                    <td><input class="aantal" data-id="2" type="number" data-price="1.55" min="0" value="1"></td>
+                    <td><span id="sub-2" class="sub"></span></td>
                 </tr>
                 <tr>
                     <th scope="row"><img class="Winkelwagentje-img" src="img/candy5.jpg"></th>
                     <td><h3>Partijtje Pastelsnoep</h3><br>Prijs per 100 gram: € 1,45</td>
-                    <td><input type="number"></td>
-                    <td>0</td>
+                    <td><input class="aantal" data-id="3" type="number" data-price="1.45" min="0" value="1"></td>
+                    <td><span id="sub-3" class="sub"></span></td>
                 </tr>
                 <tr>
                     <td colspan="4">Extra Bestellen...</td>
@@ -91,16 +93,16 @@
                 <tr>
                     <td colspan="4">
                         <div class="checkbox">
-                            <label><input type="checkbox" value="">In feestelijke snoepemmer (1,50)</label>
+                        <label><input class="option" type="checkbox" value="0" data-price="1.50">In feestelijke snoepemmer (1,50)</label>
                         </div>
                         <div class="checkbox">
-                            <label><input type="checkbox" value="">Met elektrische tandeborstel (24,95)</label>
+                        <label><input class="option" type="checkbox" value="0" data-price="24.95">Met elektrische tandeborstel (24,95)</label>
                         </div>
                         <div class="radio">
-                            <label><input type="radio" name="optradio">Zelf ophalen(Gratis)</label>
+                        <label><input class="option" type="radio" name="optradio" value="0" data-price="0">Zelf ophalen(Gratis)</label>
                         </div>
                         <div class="radio">
-                            <label><input type="radio" name="optradio">Laten bezorgen (€4,95)</label>
+                        <label><input class="option" type="radio" name="optradio" value="0" data-price="4.95">Laten bezorgen (€4,95)</label>
                         </div>
                     </td>
                 </tr>
@@ -113,8 +115,8 @@
                 <tr>
                     <td></td>
                     <td></td>
-                    <td><button>Bereken Totaal</button></td>
-                    <td>€</td>
+                    <td></td>
+                    <td><span id="total"></span></td>
                 </tr>
                 </tbody>
             </table>
@@ -123,6 +125,7 @@
 </div>
 
 <!-- Optional JavaScript -->
+<script src="js/CandyShop.js"></script>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

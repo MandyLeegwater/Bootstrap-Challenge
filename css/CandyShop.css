@@ -1,0 +1,26 @@
+.no-border{
+    border: none;
+}
+h1, h2, h3{
+    font-family: 'Freckle Face', cursive;
+}
+body, p, a{
+    font-family: 'Alegreya', serif;
+}
+.jumbotron{
+    background-image: url("../img/candy_head.jpg");
+}
+
+.btn{
+    max-width: 120px;
+}
+.Winkelwagentje-img{
+    width: 150px;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 992px) {
+    .card-img-top{
+        max-width: 300px;
+    }
+}
